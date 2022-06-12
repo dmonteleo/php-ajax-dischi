@@ -8,6 +8,7 @@ require_once __DIR__ . '/../data/db.php';
 // 3. per evitare che si possa verificare il caso in cui venga chiamato un genere non presente l'API invia oltre agli album anche un array di generi 
 
 $albums = empty($_GET['genre']) || $_GET['genre'] === 'all' ? $database : [];
+$genres = [];
 if (count($albums) === 0) {
   foreach ($database as $album) {
     if ($album['genre'] === $_GET['genre']) {
@@ -16,6 +17,22 @@ if (count($albums) === 0) {
   }
 }
 
-var_dump($albums);
+foreach ($database as $album) {
+  if (!in_array($album['genre'], $genres)) {
+    $genres[] = $album['genre'];
+  }
+};
+
+// var_dump($albums);
+
+$response = [
+  'albums' => $albums, 
+  'genres' => $genres
+];
+
+var_dump($response);
+
+header('Content-Type: application/json');
+echo json_encode($response);
 
 ?>
