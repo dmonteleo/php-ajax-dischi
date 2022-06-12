@@ -9,10 +9,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.16.12"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <link rel="stylesheet" href="./styles/style.css">
   <title>php ajax dischi</title>
 </head>
 <body>
+  <div id="app">
+
+    <header class="d-flex justify-content-between ps-3 pe-3">
+      <div>
+        <img src="img/spotify-logo.png" alt="Spotify">
+      </div>
+      <div>
+
+        <select class="form-select mt-3" name="" id="">
+          <option value="all">Seleziona un genere</option>
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Metal">Metal</option>
+        </select>
+
+      </div>
+    </header>
+
+    <main class="container mt-5">
+      <div class="d-flex flex-wrap">
+        <div class="disc p-3 text-center">
+          <div class="p-3">
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
